@@ -1,13 +1,21 @@
 import './App.css';
-import Category from './components/Categories/Category';
-import Header from './components/Header';
+
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from 'react-router-dom'
+import Main from './components/Main';
+
 
 function App() {
   return (
-    <main className="my-container mx-auto border bg-white p-4">
-      <Header />
-      <Category />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Main />}/>
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
